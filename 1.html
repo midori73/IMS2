@@ -1,0 +1,99 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<style>
+p {
+width:310px;
+height:180px;
+font-size:20px;
+background-color:white;
+display:none;
+}
+ 
+button {
+width:80px;
+height:40px;
+font-size:20px;
+}
+ 
+.active {
+background-color:grey;
+}
+ 
+.show {
+display: block;
+}
+
+div{ border:1px solid #000} 
+</style>
+</head>
+<body>
+<br />
+<h1  style="text-indent:12em">综合案例平台</h1>
+
+<center>
+<button class='active'>经济</button>
+<button>历史</button>
+<button>教育</button>
+<button>科技</button>
+<button>游戏</button>
+<button>生活</button>
+<button>企业</button>
+<button>法律</button>
+<button>实时</button>
+</br>
+</br>
+<div style="border:1px solid #000;height:550px;width:750px;text-indent:1em" align="left">
+<p class="show" >
+<a href="2.html" >股市</a>
+</p>
+
+<p  >
+某历史事件
+</p>
+
+<p >
+某教育事件
+</p>
+<p >
+某科技事件
+</p>
+<p >
+某游戏事件
+</p>
+<p >
+某生活事件
+</p>
+<p >
+某企业事件
+</p>
+<p >
+某法律事件
+</p>
+<p >
+某实时事件
+</p>
+</div>
+</center>
+</body>
+<script>
+var aButton = document.getElementsByTagName('button');
+var aDiv = document.getElementsByTagName('p');
+ 
+
+for (var i = 0; i < aButton.length; i++) {
+
+aButton[i].index=i;
+aButton[i].onclick = function () {
+
+for (var j = 0; j < aButton.length; j++) {
+aButton[j].className = '';
+aDiv[j].className = '';
+}
+
+this.className = 'active';
+aDiv[this.index].className = 'show';
+};
+}
+</script>
+</html>

@@ -1,0 +1,785 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<style>
+
+button {
+width:80px;
+height:40px;
+font-size:20px;
+}
+
+
+div{ border:1px solid #000} 
+</style>
+
+
+
+<head>
+   <meta charset="UTF-8">
+   <title></title>
+</head>
+
+
+
+<body>
+<br />
+   <h1  style="text-indent:12em">综合案例平台</h1>
+<center>
+<button class='active'>经济</button>
+<button>历史</button>
+<button>教育</button>
+<button>科技</button>
+<button>游戏</button>
+<button>生活</button>
+<button>企业</button>
+<button>法律</button>
+<button>实时</button>
+<h3  >中国股市指数发展历程（上证指数，深证指数）</h3>
+</center>
+
+<center>
+
+   <button id="p2006A"  onclick="showtext2006A()" style= "display:none;width:150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 375px;top:540px;" >
+股份制改革
+</button>
+
+
+  <button id="p2006B"  onclick="showtext2006B()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 240px;top:240px" >
+人民币升值
+</button>
+
+
+  <button id="p2006C" onclick="showtext2006C()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 520px;top:240px" >
+基金大规模发行
+</button>
+
+
+<button id="p2006"  style="display:none;width: 210px;height: 210px;background-color:#F5F5F5;border-radius:110px;position: absolute;left: 350px;top:330px;">2006<br>上证指数 1163.878-2675.474 升130.43%<br>深证成指 2873.535-6647.139 升132.12%
+</button>
+
+   <button id="fanhui2006"  onclick="showtext2006()" style= "display:none;width:120px;height: 120px;background-color: #F5F5F5;border-radius:60px;position: absolute;left: 395px;top:540px;" >
+返回
+</button>
+
+
+
+   <button id="p2007A"  onclick="showtext2007A()" style= "display:none;width:150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 1025px;top:540px;" >
+基金暂停发行
+</button>
+
+
+  <button id="p2007B"  onclick="showtext2007B()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 890px;top:240px" >
+次贷危机
+</button>
+
+
+  <button id="p2007C" onclick="showtext2007C()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 1175px;top:240px" >
+大小非减持
+</button>
+
+
+<button id="p2007"  style="display:none;width: 210px;height: 210px;background-color:#F5F5F5;border-radius:110px;position: absolute;left: 1000px;top:330px;">2007<br>上证指数 2728.188-5261.563 升96.66%<br>深证成指 6730.121-17700.621 升166.29%
+</button>
+
+   <button id="fanhui2007"  onclick="showtext2007()" style= "display:none;width:120px;height: 120px;background-color: #F5F5F5;border-radius:60px;position: absolute;left: 1045px;top:540px;" >
+返回
+</button>
+
+
+
+
+
+
+
+
+
+
+
+   <button id="p2008A"  onclick="showtext2008A()" style= "display:block;width:150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 375px;top:540px;" >
+四万亿投资
+</button>
+
+
+  <button id="p2008B"  onclick="showtext2008B()"  style= "display:block;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 240px;top:240px" >
+十大产业振兴规划
+</button>
+
+
+  <button id="p2008C" onclick="showtext2008C()"  style= "display:block;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 520px;top:240px" >
+美国量化宽松
+</button>
+
+
+<button id="p2008"  style="display:block;width: 210px;height: 210px;background-color:#F5F5F5;border-radius:110px;position: absolute;left: 350px;top:330px;">2008<br>上证指数 5265.000-1820.805 降65.59%<br>深证成指 17731.840-6485.513 降63.36%
+</button>
+
+   <button id="fanhui2008"  onclick="showtext2008()" style= "display:none;width:120px;height: 120px;background-color: #F5F5F5;border-radius:60px;position: absolute;left: 395px;top:540px;" >
+返回
+</button>
+
+
+
+   <button id="p2009A"  onclick="showtext2009A()" style= "display:block;width:150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 1025px;top:540px;" >
+IPO重启
+</button>
+
+
+  <button id="p2009B"  onclick="showtext2009B()"  style= "display:block;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 890px;top:240px" >
+紧缩的宏观政策
+</button>
+
+
+  <button id="p2009C" onclick="showtext2009C()"  style= "display:block;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 1175px;top:240px" >
+欧洲债务危机
+</button>
+
+
+<button id="p2009"  style="display:block;width: 210px;height: 210px;background-color:#F5F5F5;border-radius:110px;position: absolute;left: 1000px;top:330px;">2009<br>上证指数 1849.020-3277.139 升79.98%<br>深证成指 6557.421-13699.970 升111.24%
+</button>
+
+   <button id="fanhui2009"  onclick="showtext2009()" style= "display:none;width:120px;height: 120px;background-color: #F5F5F5;border-radius:60px;position: absolute;left: 1045px;top:540px;" >
+返回
+</button>
+
+
+
+
+
+
+
+
+
+
+
+   <button id="p2010A"  onclick="showtext2010A()" style= "display:none;width:150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 375px;top:540px;" >
+美国第二轮量化宽松货币政策
+</button>
+
+
+  <button id="p2010B"  onclick="showtext2010B()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 240px;top:240px" >
+流动性泛滥
+</button>
+
+
+  <button id="p2010C" onclick="showtext2010C()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 520px;top:240px" >
+人民币升值
+</button>
+
+
+<button id="p2010"  style="display:none;width: 210px;height: 210px;background-color:#F5F5F5;border-radius:110px;position: absolute;left: 350px;top:330px;">2010<br>上证指数 3289.75-2808.077 降14.31%<br>深证成指 13766.096-12458.552 降9.06%
+</button>
+
+   <button id="fanhui2010"  onclick="showtext2010()" style= "display:none;width:120px;height: 120px;background-color: #F5F5F5;border-radius:60px;position: absolute;left: 395px;top:540px;" >
+返回
+</button>
+
+
+
+   <button id="p2011A"  onclick="showtext2011A()" style= "display:none;width:150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 1025px;top:540px;" >
+紧缩调控
+</button>
+
+
+  <button id="p2011B"  onclick="showtext2011B()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 890px;top:240px" >
+通胀压力
+</button>
+
+
+  <button id="p2011C" onclick="showtext2011C()"  style= "display:none;width: 150px;height: 150px;background-color: #F5F5F5;border-radius:75px;position: absolute;left: 1175px;top:240px" >
+经济增速放缓
+</button>
+
+
+<button id="p2011"  style="display:none;width: 210px;height: 210px;background-color:#F5F5F5;border-radius:110px;position: absolute;left: 1000px;top:330px;">2011<br>上证指数 2825.329-2199.417 降21.68%<br>深证成指  12578.447-8918.816 降28.41%
+</button>
+
+   <button id="fanhui2011"  onclick="showtext2011()" style= "display:none;width:120px;height: 120px;background-color: #F5F5F5;border-radius:60px;position: absolute;left: 1045px;top:540px;" >
+返回
+</button>
+
+
+
+
+
+
+
+</center>
+
+
+<button id="shang1" onclick="show1();hide2();hidexia1();hideshang1();showxia2()" style="display:block;position: absolute;left: 100px;top:400px">上一页</button>
+
+<button id="shang2" onclick="hide3();show2();showshang1();showxia1();hideshang2()"  style="display:none;position: absolute;left: 100px;top:400px">上一页</button>
+
+
+
+<button id="xia1"  onclick="show3();hide2();hidexia1();hideshang1();showshang2()" style="display:block;position: absolute;left: 1350px;top:400px">下一页</button>
+
+<button id="xia2"  onclick="hide1();show2();showshang1();showxia1();hidexia2()"  style="display:none;position: absolute;left: 1350px;top:400px">下一页</button>
+
+
+<center>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<h2>分享你的案例信息</h2>
+</ecnter>
+
+<div style="border:1px solid #000;height:400px;width:1000px" >
+
+
+<form  style="float:left">
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&nbsp;主线年份: <input type="text" name="fname" style="width:100px"/><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+主线事件1:<input type="text" name="lname" style="width:100px" />
+
+事件信息: <input type="text" name="fname" style="width:200px"/><br>
+附属事件1: <input type="text" name="fname" style="width:100px"/><br>
+附属事件2: <input type="text" name="fname" style="width:100px"/><br>
+附属事件3: <input type="text" name="fname" style="width:100px"/><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+主线事件2:<input type="text" name="lname" style="width:100px" />
+
+事件信息: <input type="text" name="fname" style="width:200px"/><br>
+附属事件1: <input type="text" name="fname" style="width:100px"/><br>
+附属事件2: <input type="text" name="fname" style="width:100px"/><br>
+附属事件3: <input type="text" name="fname" style="width:100px"/><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+主线事件3:<input type="text" name="lname" style="width:100px" />
+事件信息: <input type="text" name="fname" style="width:200px"/><br>
+附属事件1: <input type="text" name="fname" style="width:100px"/><br>
+附属事件2: <input type="text" name="fname" style="width:100px"/><br>
+附属事件3: <input type="text" name="fname" style="width:100px"/><br>
+
+
+
+<center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<input type="submit" value="提交"  />  <input type="submit"  value="清除" />
+</center>
+</form>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script>
+
+
+   function showtext2006A( ){
+        document.getElementById("p2006").innerHTML = "股权分置改革：<br>指A股市场上的上市公司的股份分为流通股与非流通股";
+document.getElementById("fanhui2006").style.display = "block";
+document.getElementById("p2006B").innerHTML = "适应发展趋势";
+document.getElementById("p2006C").innerHTML = "引进市场化的激励和约束机制";
+document.getElementById("p2006A").style.display = "none";
+       }
+
+
+
+   function showtext2006B( ){
+        document.getElementById("p2006").innerHTML = "人民币升值：<br>人民币升值是相对于其他货币而言的，就是人民币的购买力增强";
+document.getElementById("fanhui2006").style.display = "block";
+document.getElementById("p2006B").innerHTML = "对出口造成压力";
+document.getElementById("p2006C").innerHTML = "减轻进口能源和原料的成本负担";
+document.getElementById("p2006A").style.display = "none";
+
+       }
+
+
+
+
+
+   function showtext2006C( ){
+        document.getElementById("p2006").innerHTML = "基金大规模发行：<br>基金是指为了某种目的而设立的具有一定数量的资金，主要指证券投资基金";
+document.getElementById("fanhui2006").style.display = "block";
+document.getElementById("p2006B").innerHTML = "带来被动资金";
+document.getElementById("p2006C").innerHTML = "使投资市场更加专业化";
+document.getElementById("p2006A").style.display = "none";
+       }
+
+
+
+   function showtext2006( ){
+        document.getElementById("p2006").innerHTML = "2006<br>上证指数 1163.878-2675.474 升130.43%<br>深证成指 2873.535-6647.139 升132.12%";
+document.getElementById("fanhui2006").style.display = "none";
+document.getElementById("p2006A").style.display = "block";
+document.getElementById("p2006A").innerHTML = "股权分置改革";
+document.getElementById("p2006B").innerHTML = "人民币升值";
+document.getElementById("p2006C").innerHTML = "基金大规模发行";
+       }
+
+
+
+  function showtext2007A( ){
+        document.getElementById("p2007").innerHTML = "基金暂停发行：<br>基金是指为了某种目的而设立的具有一定数量的资金，主要指证券投资基金";
+document.getElementById("fanhui2007").style.display = "block";
+document.getElementById("p2007B").innerHTML = "减少被动资金量";
+document.getElementById("p2007C").innerHTML = "加剧市场波动";
+document.getElementById("p2007A").style.display = "none";
+       }
+
+
+
+   function showtext2007B( ){
+        document.getElementById("p2007").innerHTML = "次贷危机：<br>由美国次级房屋信贷行业违约剧增、信用紧缩问题引发的金融危机";
+document.getElementById("fanhui2007").style.display = "block";
+document.getElementById("p2007B").innerHTML = "金融市场产生了强烈的信贷紧缩效应";
+document.getElementById("p2007C").innerHTML = "破坏了货币流通体系";
+document.getElementById("p2007A").style.display = "none";
+       }
+
+
+
+
+
+   function showtext2007C( ){
+        document.getElementById("p2007").innerHTML = "大小非减持：<br>非流通股套现";
+document.getElementById("fanhui2007").style.display = "block";
+document.getElementById("p2007B").innerHTML = "加大股价下行压力";
+document.getElementById("p2007C").innerHTML = "降低投资者信心";
+document.getElementById("p2007A").style.display = "none";
+       }
+
+
+
+   function showtext2007( ){
+        document.getElementById("p2007").innerHTML = "2007<br>上证指数 2728.188-5261.563 升96.66%<br>深证成指 6730.121-17700.621 升166.29%";
+document.getElementById("fanhui2007").style.display = "none";
+document.getElementById("p2007A").style.display = "block";
+document.getElementById("p2007A").innerHTML = "基金暂停发行";
+document.getElementById("p2007B").innerHTML = "次贷危机";
+document.getElementById("p2007C").innerHTML = "大小非减持";
+       }
+
+   function hide1( ){
+document.getElementById("fanhui2007").style.display = "none";
+document.getElementById("p2007").style.display = "none";
+document.getElementById("p2007A").style.display = "none";
+document.getElementById("p2007B").style.display = "none";
+document.getElementById("p2007C").style.display = "none";
+document.getElementById("fanhui2006").style.display = "none";
+document.getElementById("p2006").style.display = "none";
+document.getElementById("p2006A").style.display = "none";
+document.getElementById("p2006B").style.display = "none";
+document.getElementById("p2006C").style.display = "none";
+
+
+       }
+
+   function show1( ){
+document.getElementById("fanhui2007").style.display = "none";
+document.getElementById("p2007").style.display = "block";
+document.getElementById("p2007A").style.display = "block";
+document.getElementById("p2007B").style.display = "block";
+document.getElementById("p2007C").style.display = "block";
+document.getElementById("fanhui2006").style.display = "none";
+document.getElementById("p2006").style.display = "block";
+document.getElementById("p2006A").style.display = "block";
+document.getElementById("p2006B").style.display = "block";
+document.getElementById("p2006C").style.display = "block";
+
+
+       }
+
+
+   function showtext2008A( ){
+        document.getElementById("p2008").innerHTML = "四万亿投资：<br>为应对次贷危机，中国提出的投资计划";
+document.getElementById("fanhui2008").style.display = "block";
+document.getElementById("p2008B").innerHTML = "扩大了内需";
+document.getElementById("p2008C").innerHTML = "促进经济平稳较快增长";
+document.getElementById("p2008A").style.display = "none";
+       }
+
+
+
+   function showtext2008B( ){
+        document.getElementById("p2008").innerHTML = "十大产业振兴规划：<br>中国对钢铁、汽车、船舶、石化等十个重点产业调整和振兴规划的编制工作";
+document.getElementById("fanhui2008").style.display = "block";
+document.getElementById("p2008B").innerHTML = "促进了经济增长";
+document.getElementById("p2008C").innerHTML = "改善了经济结构";
+document.getElementById("p2008A").style.display = "none";
+       }
+
+
+
+
+
+   function showtext2008C( ){
+        document.getElementById("p2008").innerHTML = "美国量化宽松：<br>美国降低基准利率";
+document.getElementById("fanhui2008").style.display = "block";
+document.getElementById("p2008B").innerHTML = "给人民币带来升值压力";
+document.getElementById("p2008C").innerHTML = "降低美元借贷成本，推高中国债务率";
+document.getElementById("p2008A").style.display = "none";
+       }
+
+
+
+   function showtext2008( ){
+        document.getElementById("p2008").innerHTML = "2008<br>上证指数 5265.000-1820.805 降65.59%<br>深证成指 17731.840-6485.513 降63.36%";
+document.getElementById("fanhui2008").style.display = "none";
+document.getElementById("p2008A").style.display = "block";
+document.getElementById("p2008A").innerHTML = "四万亿投资";
+document.getElementById("p2008B").innerHTML = "十大产业振兴规划";
+document.getElementById("p2008C").innerHTML = "美国量化宽松";
+       }
+
+
+
+  function showtext2009A( ){
+        document.getElementById("p2009").innerHTML = "IPO重启：<br>重启公司上市通道";
+document.getElementById("fanhui2009").style.display = "block";
+document.getElementById("p2009B").innerHTML = "重新分配资金，资金被稀释";
+document.getElementById("p2009C").innerHTML = "带来更多高质量的投资标的";
+document.getElementById("p2009A").style.display = "none";
+       }
+
+
+
+   function showtext2009B( ){
+        document.getElementById("p2009").innerHTML = "紧缩的宏观政策：<br>中国采取紧缩的货币政策";
+document.getElementById("fanhui2009").style.display = "block";
+document.getElementById("p2009B").innerHTML = "货币供应量减少";
+document.getElementById("p2009C").innerHTML = "利率下降";
+document.getElementById("p2009A").style.display = "none";
+       }
+
+
+
+
+
+   function showtext2009C( ){
+        document.getElementById("p2009").innerHTML = "欧洲债务危机：<br>2008年金融危机发生后，希腊等欧盟国家所发生的债务危机";
+document.getElementById("fanhui2009").style.display = "block";
+document.getElementById("p2009B").innerHTML = "对中国出口产生影响";
+document.getElementById("p2009C").innerHTML = "加剧短期资本流动波动性";
+document.getElementById("p2009A").style.display = "none";
+       }
+
+
+
+   function showtext2009( ){
+        document.getElementById("p2009").innerHTML = "2009<br>1849.020-3277.139 升79.98%<br>深证成指 6557.421-13699.970 升111.24%";
+document.getElementById("fanhui2009").style.display = "none";
+document.getElementById("p2009A").style.display = "block";
+document.getElementById("p2009A").innerHTML = "IPO重启";
+document.getElementById("p2009B").innerHTML = "紧缩的宏观政策";
+document.getElementById("p2009C").innerHTML = "欧洲债务危机";
+       }
+
+   function hide2( ){
+document.getElementById("fanhui2009").style.display = "none";
+document.getElementById("p2009").style.display = "none";
+document.getElementById("p2009A").style.display = "none";
+document.getElementById("p2009B").style.display = "none";
+document.getElementById("p2009C").style.display = "none";
+document.getElementById("fanhui2008").style.display = "none";
+document.getElementById("p2008").style.display = "none";
+document.getElementById("p2008A").style.display = "none";
+document.getElementById("p2008B").style.display = "none";
+document.getElementById("p2008C").style.display = "none";
+
+
+       }
+
+   function show2( ){
+document.getElementById("fanhui2009").style.display = "none";
+document.getElementById("p2009").style.display = "block";
+document.getElementById("p2009A").style.display = "block";
+document.getElementById("p2009B").style.display = "block";
+document.getElementById("p2009C").style.display = "block";
+document.getElementById("fanhui2008").style.display = "none";
+document.getElementById("p2008").style.display = "block";
+document.getElementById("p2008A").style.display = "block";
+document.getElementById("p2008B").style.display = "block";
+document.getElementById("p2008C").style.display = "block";
+
+
+       }
+
+
+
+
+
+
+
+   function showtext2010A( ){
+        document.getElementById("p2010").innerHTML = "美国第二轮量化宽松货币政策：<br>实行低利率，增大货币供应";
+document.getElementById("fanhui2010").style.display = "block";
+document.getElementById("p2010B").innerHTML = "美元流向中国，中国债务增多";
+document.getElementById("p2010C").innerHTML = "对中国资产价格造成上行压力";
+document.getElementById("p2010A").style.display = "none";
+       }
+
+
+
+   function showtext2010B( ){
+        document.getElementById("p2010").innerHTML = "流动性泛滥：<br>市场交易量较大，换手率偏高";
+document.getElementById("fanhui2010").style.display = "block";
+document.getElementById("p2010B").innerHTML = "加剧市场波动";
+document.getElementById("p2010C").innerHTML = "市场资金配置效率更高";
+document.getElementById("p2010A").style.display = "none";
+       }
+
+
+
+
+
+   function showtext2010C( ){
+        document.getElementById("p2010").innerHTML = "人民币升值：<br>人民币相对其它货币增值，购买力变大";
+document.getElementById("fanhui2010").style.display = "block";
+document.getElementById("p2010B").innerHTML = "对出口造成压力";
+document.getElementById("p2010C").innerHTML = "减轻进口能源和原料的成本负担";
+document.getElementById("p2010A").style.display = "none";
+       }
+
+
+
+   function showtext2010( ){
+        document.getElementById("p2010").innerHTML = "2010<br>上证指数 3289.75-2808.077 降14.31%<br>深证成指 13766.096-12458.552 降9.06%";
+document.getElementById("fanhui2010").style.display = "none";
+document.getElementById("p2010A").style.display = "block";
+document.getElementById("p2010A").innerHTML = "美国第二轮量化宽松货币政策";
+document.getElementById("p2010B").innerHTML = "流动性泛滥";
+document.getElementById("p2010C").innerHTML = "人民币升值";
+       }
+
+
+
+  function showtext2011A( ){
+        document.getElementById("p2011").innerHTML = "紧缩调控：<br>中国政府采取紧锁的货币政策";
+document.getElementById("fanhui2011").style.display = "block";
+document.getElementById("p2011B").innerHTML = "借贷成本上升";
+document.getElementById("p2011C").innerHTML = "企业债务减少，杠杆率下降";
+document.getElementById("p2011A").style.display = "none";
+       }
+
+
+
+   function showtext2011B( ){
+        document.getElementById("p2011").innerHTML = "通胀压力：<br>货币贬值，物价上涨";
+document.getElementById("fanhui2011").style.display = "block";
+document.getElementById("p2011B").innerHTML = "降低消费者消费意愿";
+document.getElementById("p2011C").innerHTML = "促使财富分布不均匀";
+document.getElementById("p2011A").style.display = "none";
+       }
+
+
+
+
+
+   function showtext2011C( ){
+        document.getElementById("p2011").innerHTML = "经济增速放缓：<br>中国经济增长速度放缓";
+document.getElementById("fanhui2011").style.display = "block";
+document.getElementById("p2011B").innerHTML = "促使经济结构改革";
+document.getElementById("p2011C").innerHTML = "企业利润下降";
+document.getElementById("p2011A").style.display = "none";
+       }
+
+
+
+   function showtext2011( ){
+        document.getElementById("p2011").innerHTML = "2011<br>上证指数 2825.329-2199.417 降21.68%<br>深证成指 12578.447-8918.816 降28.41%";
+document.getElementById("fanhui2011").style.display = "none";
+document.getElementById("p2011A").style.display = "block";
+document.getElementById("p2011A").innerHTML = "紧缩调控";
+document.getElementById("p2011B").innerHTML = "通胀压力";
+document.getElementById("p2011C").innerHTML = "经济增速放缓";
+       }
+
+   function hide3( ){
+document.getElementById("fanhui2011").style.display = "none";
+document.getElementById("p2011").style.display = "none";
+document.getElementById("p2011A").style.display = "none";
+document.getElementById("p2011B").style.display = "none";
+document.getElementById("p2011C").style.display = "none";
+document.getElementById("fanhui2010").style.display = "none";
+document.getElementById("p2010").style.display = "none";
+document.getElementById("p2010A").style.display = "none";
+document.getElementById("p2010B").style.display = "none";
+document.getElementById("p2010C").style.display = "none";
+
+
+       }
+
+   function show3( ){
+document.getElementById("fanhui2011").style.display = "none";
+document.getElementById("p2011").style.display = "block";
+document.getElementById("p2011A").style.display = "block";
+document.getElementById("p2011B").style.display = "block";
+document.getElementById("p2011C").style.display = "block";
+document.getElementById("fanhui2010").style.display = "none";
+document.getElementById("p2010").style.display = "block";
+document.getElementById("p2010A").style.display = "block";
+document.getElementById("p2010B").style.display = "block";
+document.getElementById("p2010C").style.display = "block";
+
+
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   function showshang1( ){
+document.getElementById("shang1").style.display = "block";
+
+}
+   function hideshang1( ){
+document.getElementById("shang1").style.display = "none";
+
+}
+
+   function showshang2( ){
+document.getElementById("shang2").style.display = "block";
+
+}
+
+
+   function hideshang2( ){
+document.getElementById("shang2").style.display = "none";
+
+}
+
+
+ function showxia1( ){
+document.getElementById("xia1").style.display = "block";
+
+}
+   function hidexia1( ){
+document.getElementById("xia1").style.display = "none";
+
+}
+
+   function showxia2( ){
+document.getElementById("xia2").style.display = "block";
+
+}
+
+
+   function hidexia2( ){
+document.getElementById("xia2").style.display = "none";
+
+}
+
+
+
+
+
+
+
+
+
+   </script>
+</body>
+</html>
+
